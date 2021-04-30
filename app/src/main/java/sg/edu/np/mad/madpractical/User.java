@@ -37,6 +37,8 @@ public class User {
         this.followed = followed;
     }
 
+    public User() {}
+    
     public User(boolean followed) {
         this.followed = followed;
     }
