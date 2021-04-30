@@ -18,15 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.v(TAG, "Main Activity Created");
 
-//        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-//        boolean followed =
         User user = new User(false);
-
-        TextView title = findViewById(R.id.title);
-        title.setText("Hello World!");
-
-        TextView lorem = findViewById(R.id.lorem);
-        lorem.setText("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde facere aliquid quaerat enim excepturi, hic suscipit quam blanditiis eum laborum vero, iure, mollitia recusandae architecto quod porro aperiam rem eveniet.");
 
         Button followBtn = findViewById(R.id.follow_btn);
         followBtn.setOnClickListener(new View.OnClickListener() {
@@ -41,5 +33,35 @@ public class MainActivity extends AppCompatActivity {
                 );
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.v(TAG, "Start");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.v(TAG, "Resume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.v(TAG, "Pause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.v(TAG, "Stop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.v(TAG, "Destroy");
     }
 }
